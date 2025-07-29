@@ -1,0 +1,15 @@
+{
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.root": "/frontend",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  }
+}

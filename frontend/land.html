@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System – Simple, Secure, Smart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            transition: background-image 1s ease-in-out;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700">
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fas fa-file-alt text-blue-600"></i> DMS
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Pricing</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
+                <a href="index.html"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Launch
+                    App</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <a href="#features" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Features</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Pricing</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Contact</a>
+            <a href="index.html" class="block px-4 py-3 text-blue-600 hover:bg-gray-50 font-medium">Launch App</a>
+        </div>
+    </header>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+
+
+    <!-- Hero -->
+    <section id="hero" class="hero-bg text-white relative overflow-hidden">
+        <div id="hero-overlay" class="absolute inset-0 bg-center bg-cover opacity-0"
+            style="transition:opacity 3s ease-in-out"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col items-center text-center gap-10">
+            <div class="flex-1">
+                <h1 class="text-4xl sm:text-6xl font-bold mb-6 leading-tight">
+                    Manage your documents<br class="hidden sm:block"> with confidence.
+                </h1>
+                <p class="text-xl text-gray-200 mb-10">
+                    Upload, version, share and collaborate on files—all in one modern dashboard packed with powerful
+                    admin controls.
+                </p>
+                <a href="index.html"
+                    class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full text-lg hover:bg-blue-700 transition-transform shadow-xl transform hover:-translate-y-1">
+                    Get Started <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+
+            </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Why choose our DMS?</h2>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-cloud-upload-alt text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Effortless Uploads</h3>
+                    <p>Drag-and-drop or browse. Large file support up to 10&nbsp;MB each.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-lock text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Granular Privacy</h3>
+                    <p>Make documents public or private and control collaborator access.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-history text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Version History</h3>
+                    <p>Never lose context—download or preview any previous version.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-users text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
+                    <p>Share files with teammates, track ownership and contributions.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-shield-alt text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Admin Dashboard</h3>
+                    <p>Full-rights overview to delete, toggle privacy, and audit all documents.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-sm hover:shadow-lg transition">
+                    <i class="fas fa-mobile-alt text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Responsive</h3>
+                    <p>Access anywhere—desktop, tablet, or mobile—with a fluid UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-blue-600 py-16 text-center text-white">
+        <h2 class="text-3xl font-bold mb-6">Ready to take control of your documents?</h2>
+        <a href="index.html"
+            class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-md text-lg shadow hover:bg-gray-100 transition-colors">
+            Launch the App
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-sm border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid gap-8 md:grid-cols-3">
+            <!-- Brand -->
+            <div>
+                <a href="#" class="text-2xl font-semibold text-white flex items-center gap-2 mb-4">
+                    <i class="fas fa-file-alt text-blue-500"></i> DMS
+                </a>
+                <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Simple, secure and smart document management
+                    for modern teams.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="index.html" class="hover:text-white transition-colors">Launch App</a></li>
+                </ul>
+            </div>
+            <!-- Social -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 py-6 text-center text-xs text-gray-500">
+            &copy; 2025 Document Management System. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Slideshow Script placed after DOM -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSection = document.getElementById('hero');
+            if (!heroSection) return;
+            const heroUrls = [
+                'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/205316/pexels-photo-205316.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/374147/pexels-photo-374147.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/626986/pexels-photo-626986.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/3277808/pexels-photo-3277808.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600',
+                'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&h=900&w=1600'
+            ];
+            let idx = 0;
+            const overlay = document.getElementById('hero-overlay');
+            function applyBg(url) {
+                heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${url}')`;
+            }
+            // initialize with CSS default (index 0 already set)
+            idx = 0;
+            function crossFade(url) {
+                const img = new Image();
+                img.src = url;
+                img.onload = () => {
+                    overlay.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${url}')`;
+                    overlay.style.opacity = '1';
+                    setTimeout(() => {
+                        applyBg(url);
+                        overlay.style.opacity = '0';
+                    }, 3000);
+                };
+            }
+            setInterval(() => {
+                idx = (idx + 1) % heroUrls.length;
+                crossFade(heroUrls[idx]);
+            }, 8000);
+        });
+    </script>
+
+</body>
+
+</html>

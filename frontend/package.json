@@ -1,0 +1,16 @@
+{
+  "name": "document-management-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for document management system",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=5500 --open=/index.html",
+    "dev": "live-server --port=5500 --open=/index.html --watch=."
+  },
+  "keywords": ["document-management", "frontend", "html", "css", "javascript"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
