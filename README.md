@@ -1,70 +1,108 @@
-# Document Management System
+# Document Management System 📁
 
-A secure, collaborative document management system with version control.
+A secure, collaborative document management system with version control, built with Node.js, Express, MongoDB, and vanilla JavaScript.
 
-## Project Structure
+## 🚀 Features
 
-\`\`\`
+- **Secure Authentication**: JWT-based user authentication and authorization
+- **File Upload & Management**: Support for multiple file formats with secure storage
+- **Version Control**: Track document versions and changes over time
+- **Collaborative Environment**: Multi-user access with role-based permissions
+- **Document Search**: Find documents quickly with search functionality
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **RESTful API**: Clean API architecture for easy integration
+
+## 🛠️ Tech Stack
+
+**Backend:**
+- Node.js & Express.js
+- MongoDB & Mongoose
+- JWT Authentication
+- Multer (File uploads)
+- bcryptjs (Password hashing)
+
+**Frontend:**
+- Vanilla JavaScript (ES6+)
+- HTML5 & CSS3
+- Responsive Design
+
+## 📋 Prerequisites
+
+Before running this application, make sure you have the following installed:
+
+- **Node.js** (v14 or higher) - [Download here](https://nodejs.org/)
+- **MongoDB** - [Download here](https://www.mongodb.com/try/download/community)
+- **VS Code** (Recommended) - [Download here](https://code.visualstudio.com/)
+
+### Recommended VS Code Extensions
+
+- Live Server (by Ritwick Dey) - For frontend development
+- REST Client (by Huachao Mao) - For API testing
+- MongoDB for VS Code - For database management
+- Node.js Extension Pack - For Node.js development
+- Prettier - Code formatter
+- ES6 String HTML - HTML syntax highlighting in JS
+
+## 📁 Project Structure
+
+```
 document-management-system/
 ├── backend/
-│   ├── server.js
-│   ├── package.json
-│   ├── uploads/ (created automatically)
-│   └── .env
+│   ├── server.js              # Main server file
+│   ├── package.json           # Backend dependencies
+│   ├── uploads/               # File storage (auto-created)
+│   └── .env                   # Environment variables
 ├── frontend/
-│   ├── index.html
-│   ├── app.js
-│   ├── style.css
-│   └── package.json (optional for live server)
+│   ├── index.html             # Main HTML file
+│   ├── app.js                 # Frontend JavaScript
+│   ├── style.css              # Styles
+│   └── package.json           # Frontend dependencies (optional)
 ├── scripts/
-│   └── mongodb-setup.js
+│   └── mongodb-setup.js       # Database initialization
 └── README.md
-\`\`\`
+```
 
-## Prerequisites
+## ⚡ Quick Start
 
-1. **Node.js** (v14 or higher) - [Download here](https://nodejs.org/)
-2. **MongoDB** - [Download here](https://www.mongodb.com/try/download/community)
-3. **VS Code** - [Download here](https://code.visualstudio.com/)
+### 1. Clone the Repository
 
-## VS Code Extensions (Recommended)
-
-Install these extensions in VS Code:
-- **Live Server** (by Ritwick Dey) - For frontend development
-- **REST Client** (by Huachao Mao) - For API testing
-- **MongoDB for VS Code** - For database management
-- **Node.js Extension Pack** - For Node.js development
-- **Prettier** - Code formatter
-- **ES6 String HTML** - HTML syntax highlighting in JS
-
-## Installation Steps
-
-### 1. Clone/Create Project Structure
-
-Create the following folder structure in your VS Code workspace:
+```bash
+git clone https://github.com/SHUBHvarshney001/Document_management_system.git
+cd Document_management_system
+```
 
 ### 2. Backend Setup
 
 Navigate to the backend folder and install dependencies:
 
-\`\`\`bash
+```bash
 cd backend
 npm init -y
 npm install express mongoose multer bcryptjs jsonwebtoken cors dotenv
 npm install -D nodemon
-\`\`\`
+```
 
 ### 3. Frontend Setup (Optional)
 
 If you want to use a local development server:
 
-\`\`\`bash
+```bash
 cd frontend
 npm init -y
 npm install -D live-server
-\`\`\`
+```
 
-### 4. Database Setup
+### 4. Environment Configuration
+
+Create a `.env` file in the backend folder:
+
+```env
+PORT=5000
+JWT_SECRET=your-super-secret-jwt-key-here
+MONGODB_URI=mongodb://localhost:27017/document_management
+```
+
+### 5. Database Setup
 
 Start MongoDB service:
 - **Windows**: MongoDB should start automatically after installation
@@ -73,116 +111,69 @@ Start MongoDB service:
 
 Run the database setup script:
 
-\`\`\`bash
+```bash
 cd scripts
 node mongodb-setup.js
-\`\`\`
+```
 
-## Running the Application
+## 🚀 Running the Application
 
-### Method 1: Using VS Code Terminal (Recommended)
+### Method 1: VS Code Development Environment
 
 1. **Open VS Code Terminal** (`Ctrl+` ` or `View > Terminal`)
-
 2. **Split Terminal** (Click the split icon or `Ctrl+Shift+5`)
 
-3. **Terminal 1 - Backend**:
-   \`\`\`bash
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm run dev
+```
+
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
+npx live-server
+```
+
+### Method 2: Live Server Extension
+
+1. **Start Backend:**
+   ```bash
    cd backend
    npm run dev
-   \`\`\`
+   ```
 
-4. **Terminal 2 - Frontend**:
-   \`\`\`bash
-   cd frontend
-   # If you installed live-server
-   npx live-server
-   # OR right-click index.html and select "Open with Live Server"
-   \`\`\`
-
-### Method 2: Using Live Server Extension
-
-1. **Start Backend**:
-   \`\`\`bash
-   cd backend
-   npm run dev
-   \`\`\`
-
-2. **Start Frontend**:
+2. **Start Frontend:**
    - Right-click on `frontend/index.html`
    - Select "Open with Live Server"
 
-### Method 3: Manual File Opening
+### Method 3: Production Mode
 
-1. **Start Backend**:
-   \`\`\`bash
+1. **Start Backend:**
+   ```bash
    cd backend
    npm start
-   \`\`\`
+   ```
 
-2. **Open Frontend**:
+2. **Open Frontend:**
    - Double-click `frontend/index.html`
    - Or drag it to your browser
 
-## Environment Variables
+## 🌐 Access the Application
 
-Create a `.env` file in the backend folder:
+- **Frontend URL**: [http://localhost:5500](http://localhost:5500) (Live Server) or file://
+- **Backend URL**: [http://localhost:5000](http://localhost:5000)
 
-\`\`\`env
-PORT=5000
-JWT_SECRET=your-super-secret-jwt-key-here
-MONGODB_URI=mongodb://localhost:27017/document_management
-\`\`\`
+### Default Login Credentials
 
-## Default Access
+- **Username**: `admin`
+- **Password**: `password`
 
-- **Frontend URL**: http://localhost:5500 (Live Server) or file://
-- **Backend URL**: http://localhost:5000
-- **Default Login**: 
-  - Username: `admin`
-  - Password: `password`
+## 📝 Package.json Scripts
 
-## Troubleshooting
+Make sure your `backend/package.json` includes:
 
-### Common Issues:
-
-1. **Port Already in Use**:
-   \`\`\`bash
-   # Kill process on port 5000
-   npx kill-port 5000
-   \`\`\`
-
-2. **MongoDB Connection Error**:
-   - Ensure MongoDB is running
-   - Check connection string in .env
-
-3. **CORS Issues**:
-   - Make sure backend CORS is configured
-   - Frontend and backend should run on different ports
-
-4. **File Upload Issues**:
-   - Check if `uploads/` folder exists in backend
-   - Verify file permissions
-
-## Development Workflow
-
-1. **Code Changes**:
-   - Backend: Nodemon will auto-restart
-   - Frontend: Live Server will auto-reload
-
-2. **API Testing**:
-   - Use REST Client extension
-   - Or use Postman/Insomnia
-
-3. **Database Viewing**:
-   - Use MongoDB for VS Code extension
-   - Or MongoDB Compass GUI
-
-## Package.json Scripts
-
-Backend package.json should include:
-
-\`\`\`json
+```json
 {
   "scripts": {
     "start": "node server.js",
@@ -190,17 +181,31 @@ Backend package.json should include:
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
-\`\`\`
+```
 
-## VS Code Workspace Settings
+## 🔧 Troubleshooting
 
-Create `.vscode/settings.json`:
+### Common Issues
 
-\`\`\`json
-{
-  "liveServer.settings.port": 5500,
-  "liveServer.settings.root": "/frontend",
-  "emmet.includeLanguages": {
-    "javascript": "html"
-  }
-}
+**Port Already in Use:**
+```bash
+npx kill-port 5000
+```
+
+**MongoDB Connection Error:**
+- Ensure MongoDB is running
+- Check connection string in .env file
+
+**CORS Issues:**
+- Make sure backend CORS is configured
+- Frontend and backend should run on different ports
+
+**File Upload Issues:**
+- Check if `uploads/` folder exists in backend
+- Verify file permissions
+
+### Development Tips
+
+- **Code Changes**: Nodemon will auto-restart backend, Live Server will auto-reload frontend
+- **API Testing**: Use REST Client extension or Postman/Insomnia
+- **Database Viewing**: Use MongoDB for VS Code extension or MongoDB Compass GUI
