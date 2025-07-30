@@ -126,7 +126,7 @@ node mongodb-setup.js
 **Terminal 1 - Backend:**
 ```bash
 cd backend
-npm run dev
+node.server.js
 ```
 
 **Terminal 2 - Frontend:**
@@ -140,11 +140,11 @@ npx live-server
 1. **Start Backend:**
    ```bash
    cd backend
-   npm run dev
+   node server.js
    ```
 
 2. **Start Frontend:**
-   - Right-click on `frontend/index.html`
+   - Right-click on `frontend/land.html`
    - Select "Open with Live Server"
 
 ### Method 3: Production Mode
@@ -152,11 +152,11 @@ npx live-server
 1. **Start Backend:**
    ```bash
    cd backend
-   npm start
+   node server.js
    ```
 
 2. **Open Frontend:**
-   - Double-click `frontend/index.html`
+   - Double-click `frontend/land.html`
    - Or drag it to your browser
 
 ## 🌐 Access the Application
